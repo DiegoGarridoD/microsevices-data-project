@@ -1,6 +1,6 @@
 server:
-  port: 8000
-
+  port: 8088
+  
 spring:
   cloud:
     gateway:
@@ -11,4 +11,4 @@ spring:
         - id: hu1-service
           uri: lb://hu1-service
           predicates:
-            - Path=/hu1/**
+            - Path=/hu/**
