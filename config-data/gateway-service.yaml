@@ -9,6 +9,6 @@ spring:
           enabled: true
       routes:
         - id: hu1-service
-          uri: lb://hu1-service
+          uri: http://localhost:8001
           predicates:
             - Path=/hu1/**
