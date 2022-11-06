@@ -1,0 +1,14 @@
+server:
+  port: 8000
+
+spring:
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        - id: hu1-service
+          uri: lb://hu1-service
+          predicates:
+            - Path=/hu1/**
