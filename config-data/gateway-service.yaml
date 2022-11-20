@@ -20,18 +20,18 @@ spring:
           predicates:
             - Path=/hu1/**
         - id: hu2-service
-          uri: http://localhost:8002
+          uri: lb://hu2-service
           predicates:
             - Path=/hu2/**
         - id: hu3-service
-          uri: http://localhost:8003
+          uri: lb://hu3-service
           predicates:
             - Path=/hu3/**
         - id: hu4-service
-          uri: http://localhost:8004
+          uri: lb://hu4-service
           predicates:
             - Path=/hu4/**
         - id: hu5-service
-          uri: http://localhost:8005
+          uri: lb://hu5-service
           predicates:
             - Path=/hu5/**
