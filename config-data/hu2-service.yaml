@@ -2,10 +2,10 @@ spring:
   application:
     name: hu2-service
   datasource:
-    url: jdbc:mysql://localhost:3306/bd_hu2-jwt
-    username: root
-    password: secreto
-jpa:
+    url: ${db_url}
+    username: ${db_username}
+    password: ${db_password}
+  jpa:
     hibernate:
       ddl-auto: update
 server:
