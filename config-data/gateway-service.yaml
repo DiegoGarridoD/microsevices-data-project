@@ -5,7 +5,10 @@ eureka:
     fetch-registry: true
     register-with-eureka: true
     serviceUrl:
-      defaultZone: ${EUREKA_URL:http://localhost:8761/eureka}
+      defaultZone: http://localhost:8761/eureka
+    instance:
+      hostname: localhost
+
 spring:
   cloud:
     gateway:
@@ -29,7 +32,3 @@ spring:
           uri: lb://hu4-service
           predicates:
             - Path=/hu4/**
-        - id: hu5-service
-          uri: lb://hu5-service
-          predicates:
-            - Path=/hu5/**
