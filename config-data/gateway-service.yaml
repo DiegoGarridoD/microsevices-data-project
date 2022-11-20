@@ -1,13 +1,5 @@
 server:
   port: 8000
-
-eureka:
-  client:
-    fetch-registry: true
-    register-with-eureka: true
-    serviceUrl:
-      defaultZone: ${EUREKA_URL:http://localhost:8761/eureka}
-       
 spring:
   cloud:
     gateway:
@@ -35,3 +27,9 @@ spring:
           uri: lb://hu5-service
           predicates:
             - Path=/hu5/**
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    serviceUrl:
+      defaultZone: ${EUREKA_URL:http://localhost:8761/eureka}
